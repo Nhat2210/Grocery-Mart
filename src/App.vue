@@ -1,24 +1,17 @@
 <template>
-  <div class="hihi">
-    xin chao
-    <p class="hihi_hehe">hehe</p>
-  </div>
+  <Header/>
+  <div class="test"></div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-
+import Header from './views/Header.vue';
 const feature = ref();
 </script>
 
 <style lang="scss" scoped>
-.hihi{
-  width: 100px;
-  font-size: 29px;
-  &_hehe{
-    font-size: 50px;
-    font-family: Gordita, sans-serif;
-    font-weight: 500;
-  }
+.test{
+  height: 1000px;
+  background: #fff;
 }
 </style>
