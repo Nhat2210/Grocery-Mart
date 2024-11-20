@@ -1,5 +1,8 @@
 <script setup>
 import logo from '@/components/logo.vue';
+import DropdownDepartments from '@/components/dropdownDepartments.vue';
+import DropdownGrocery from '@/components/dropdownGrocery.vue';
+import DropdownBeauty from '@/components/dropdownBeauty.vue';
 </script>
 <template>
     <header id="header">
@@ -10,9 +13,18 @@ import logo from '@/components/logo.vue';
                 <!--Navbar-->
                 <nav class="navbar">
                     <ul class="navbar__list">
-                        <li><a href="" class="navbar__link">Departments<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow"></a></li>
-                        <li><a href="" class="navbar__link">Grocery<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow"></a></li>
-                        <li><a href="" class="navbar__link">Beauty<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow"></a></li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Departments<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon"></a>
+                            <DropdownDepartments/>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Grocery<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon"></a>
+                            <DropdownGrocery/>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Beauty<img src="../assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon"></a>
+                            <DropdownBeauty/>
+                        </li>
                     </ul>
                 </nav>
 
@@ -20,19 +32,19 @@ import logo from '@/components/logo.vue';
                 <div class="top-act">
                     <div class="top-act__group">
                         <button class="top-act__btn">
-                            <img src="../assets/icons/search.svg" alt="top-act__icon">
+                            <img src="../assets/icons/search.svg" alt="top-act__icon" class="top-act__icon icon">
                             <!-- <span class="top-act__title"></span> -->
                         </button>
                     </div>
 
                     <div class="top-act__group">
                         <button class="top-act__btn">
-                            <img src="../assets/icons/heart.svg" alt="" class="top-act__icon">
+                            <img src="../assets/icons/heart.svg" alt="" class="top-act__icon icon">
                             <span class="top-act_title">03</span>
                         </button>
                         <div class="top-act__separate"></div>
                         <button class="top-act__btn">
-                            <img src="../assets/icons/cart.svg" alt="" class="top-act__icon">
+                            <img src="../assets/icons/cart.svg" alt="" class="top-act__icon icon">
                             <span class="top-act_title">$65.42</span>
                         </button>
                     </div>
@@ -50,16 +62,21 @@ import logo from '@/components/logo.vue';
 <style lang="scss" scoped>
 #header{
     background:#eee;
+    padding: 25px;
 }
 .top-bar{
     display: flex;
     align-items: center;
+    position: relative;
     .navbar{
        margin-left: 144px;
        margin-right: auto;
        &__list{
         display: flex;
         align-items: center;
+       }
+       &__item:hover .dropdown{
+        display: block;
        }
        &__link{
         font-size: 1.5rem;
@@ -68,10 +85,12 @@ import logo from '@/components/logo.vue';
         text-align: left;
         display: flex;
         align-items: center;
+        height: 50px;
+        padding: 15px;
     }
-       &__link:nth-child(n+1){
-        margin-left: 30px;
-       }
+    //    &__link:nth-child(2n){
+    //     padding: 15px;
+    //    }
        &__arrow{
         margin-left: 5px;
        }
@@ -112,20 +131,15 @@ import logo from '@/components/logo.vue';
         &__separate{
             width: 1px;
             height: 30px;
-            color:#333;
+            background-color: #eee;
         }
         &__avatar{
             width: 50px;
             height: 50px;
             border-radius: 8px;
+            cursor: pointer;
         }
 
-    }
-}
-.top-act__user{
-    img{
-        width: 50px;
-        height: 50px;
     }
 }
 </style>

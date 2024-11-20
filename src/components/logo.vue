@@ -2,10 +2,10 @@
 
 </script>
 <template>
-    <div class="logo">
+    <a href="./" class="logo">
         <img src="../assets/Icon.svg" alt="Grocery Mart" class="logo__img">
         <h1 class="logo__title">GroceryMart</h1>
-    </div>
+    </a>
 </template>
 
 
