@@ -62,7 +62,7 @@ import DropdownBeauty from '@/components/dropdownBeauty.vue';
 <style lang="scss" scoped>
 #header{
     background:#eee;
-    padding: 25px;
+    padding: 12px;
 }
 .top-bar{
     display: flex;
