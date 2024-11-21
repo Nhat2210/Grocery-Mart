@@ -12,8 +12,9 @@
                         <h2 class="menu-column__heading">All Departments</h2>
                         <ul class="menu-column__list">
                             <li class="menu-column__item"><a href="#!" class="menu-column__link">Savings & Featured Shops</a>
-                                <!--Sub menu 1-->
+                                <!--Sub menu -->
                                 <div class="sub-menu">
+                                    <!--Sub menu 1-->
                                     <div class="sub-menu__column">
                                         <!-- Sub menu 1.1-->
                                         <div class="menu-column">
@@ -52,6 +53,70 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--Sub menu 2-->
+                                    <div class="sub-menu__column">
+                                        <!-- Sub menu 2.1-->
+                                        <div class="menu-column">
+                                            <div class="menu-column__icon">
+                                                <img src="../assets/icons/cate-1.3.svg" alt="" class="">
+                                            </div>
+                                            <div class="menu-column__content ">
+                                                <h2 class="menu-column__heading">Computers</h2>
+                                                <ul class="menu-column__list">
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Shop All Computers</a>
+                                                    </li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Laptops</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">PC Gaming</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Monitors</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Chromebook</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Printers & Ink</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Shop all TVs</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Computer Accessories</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Desktops</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Tax Software</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Computer Software</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">PC Finder</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Sub menu 3-->
+                                    <div class="sub-menu__column">
+                                        <!-- Sub menu 3.1-->
+                                        <div class="menu-column">
+                                            <div class="menu-column__icon">
+                                                <img src="../assets/icons/cate-1.4.svg" alt="" class="">
+                                            </div>
+                                            <div class="menu-column__content ">
+                                                <h2 class="menu-column__heading">Savings</h2>
+                                                <ul class="menu-column__list">
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Tech Savings</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Overstock Savings</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Tech Rollbacks</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--Sub menu 3.2-->
+                                        <div class="menu-column">
+                                            <div class="menu-column__icon">
+                                                <img src="../assets/icons/cate-1.6.svg" alt="" class="">
+                                            </div>
+                                            <div class="menu-column__content ">
+                                                <h2 class="menu-column__heading">Cell Phones</h2>
+                                                <ul class="menu-column__list">
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Wireless Deals</a>
+                                                    </li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">5G Phones</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Prepaid Phones & Plans</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Refurbished Phones</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Iphone Accessories</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Cases & Screen Protector</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Walmart Protection Plan</a></li>
+                                                    <li class="menu-column__item"><a href="#!" class="menu-column__link">Unlocked Phones</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li class="menu-column__item"><a href="#!" class="menu-column__link">Electronics</a></li>
@@ -85,7 +150,7 @@
     position: absolute;
     left: 0;
     padding-top: 54px;
-    // display: none;
+    display: none;
     width: min(1240px, 100%);
     &__inner{
         min-height: 600px;
@@ -121,6 +186,9 @@
         font-weight: 500;
         line-height: 2.4;
     }
+    &__content{
+        flex: 1;
+    }
     &__list{
         margin-top: 13px;
     }
@@ -132,12 +200,20 @@
         line-height: 2.0;
         padding-top: 7px;
         padding-bottom: 7px;
+        &:hover{
+            color: #0071DC;
+            font-weight: 500;
+        }
     }
     &__link:first-child{
         padding-top: 0;
     }
-
-    &__link:hover{
+    &__item{
+        &:hover .sub-menu{
+            display: grid;
+        }
+    }
+    &__item:hover>&__link{
         color: #0071DC;
         font-weight: 500;
     }
@@ -146,10 +222,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 322px;
+    left: 292px;
+    padding: 0 30px;
     right: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    display: none;
     .menu-column:nth-child(2n){
-        margin-top: 15px;
+        padding-top: 15px;
     }
 }
 </style>
