@@ -10,7 +10,7 @@
 
 <style lang="scss" scoped>
 .body{
-    height: 500px;
+    height: 1500px;
     background: gray;
 }
 </style>
