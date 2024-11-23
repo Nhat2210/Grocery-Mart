@@ -154,6 +154,7 @@
 
 <style lang="scss" scoped>
 .dropdown{
+    z-index: 999;
     position: absolute;
     left: 0;
     padding-top: 54px;

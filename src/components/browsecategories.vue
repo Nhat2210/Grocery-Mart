@@ -50,7 +50,7 @@
         font-size: 2.4rem;
         font-family: Gordita;
         font-weight: 700;
-        line-height: 3.4;
+        margin-bottom: 20px;
     }
     &__list{
         display: flex;
