@@ -96,7 +96,7 @@ const options = [
                         <h3 class="filter__column__heading">Price</h3>
                         <div class="filter__column__brand">
                             <n-input-group>
-                                <n-input :style="{ width: '50%' }" />
+                                <n-input :style="{ width: '90%' }" />
                                 <n-button type="primary" ghost>
                                     Search
                                 </n-button>
@@ -110,7 +110,7 @@ const options = [
                     </div>
                 </div>
                 <div class="filter__button">
-                    <button class="filter__button__cancel">Cancel</button>
+                    <button class="filter__button__cancel" @click="closeModal">Cancel</button>
                     <button class="filter__button__showResult">Show Result</button>
                 </div>
             </form>
@@ -206,6 +206,7 @@ const options = [
 <style lang="scss" scoped>
 
 .Total-product{
+    position: relative;
     &__title{
         display: flex;
         justify-content: space-between;
@@ -307,6 +308,9 @@ const options = [
     border-radius: 20px;
     position: relative;
     z-index: 999;
+    position: absolute;
+    top: 13%;
+    width: 100%;
     &__heading{
         font-weight: 500;
         font-size: 2.2rem; 
