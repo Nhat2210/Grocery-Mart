@@ -196,6 +196,326 @@ const options = [
                     </div>
                 </div>
             </div>
+                        <!--Product 1-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-1.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Coffee Beans - Espresso Arabica and Robusta Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$47.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-2.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza Coffee Blends - Try the Italian Espresso</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$53.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">3.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-3.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza - Caffè Espresso Black Tin - Ground coffee</div>
+                    <div class="Total-product__brand">welikecoffee</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$99.99</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 4-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-4.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Qualità Oro Mountain Grown - Espresso Coffee Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$38.65</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!--Product 1-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-1.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Coffee Beans - Espresso Arabica and Robusta Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$47.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-2.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza Coffee Blends - Try the Italian Espresso</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$53.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">3.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-3.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza - Caffè Espresso Black Tin - Ground coffee</div>
+                    <div class="Total-product__brand">welikecoffee</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$99.99</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 4-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-4.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Qualità Oro Mountain Grown - Espresso Coffee Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$38.65</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!--Product 1-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-1.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Coffee Beans - Espresso Arabica and Robusta Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$47.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-2.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza Coffee Blends - Try the Italian Espresso</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$53.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">3.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-3.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza - Caffè Espresso Black Tin - Ground coffee</div>
+                    <div class="Total-product__brand">welikecoffee</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$99.99</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 4-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-4.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Qualità Oro Mountain Grown - Espresso Coffee Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$38.65</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!--Product 1-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-1.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Coffee Beans - Espresso Arabica and Robusta Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$47.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-2.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza Coffee Blends - Try the Italian Espresso</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$53.00</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">3.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-3.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Lavazza - Caffè Espresso Black Tin - Ground coffee</div>
+                    <div class="Total-product__brand">welikecoffee</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$99.99</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Product 4-->
+            <div class="Total-product__item">
+                <div class="Total-product__image">
+                    <img src="../assets/products/product-4.svg" alt="" class="Total-product__img">
+                    <button class="Total-product__heart">
+                        <img src="../assets/icons/heart.svg" alt="">
+                    </button>
+                </div>
+                <div class="Total-product__content">
+                    <div class="Total-product__name">Qualità Oro Mountain Grown - Espresso Coffee Beans</div>
+                    <div class="Total-product__brand">Lavazza</div>
+                    <div class="Total-product__priceandjudge">
+                        <div class="Total-product__price">$38.65</div>
+                        <div class="Total-product__judge">
+                            <img src="../assets/icons/star.svg" alt="" class="judge__star">
+                            <div class="judge__number">4.4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -228,9 +548,9 @@ const options = [
         }
     }
     &__list{
-        display: flex;
-        justify-content: space-between;
         gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
     &__item{
         padding: 16px;
@@ -304,7 +624,7 @@ const options = [
 // css filter
 .filter{
     padding: 30px;
-    background: #fff;
+    background: hsl(0, 0%, 87%);
     border-radius: 20px;
     position: relative;
     z-index: 999;
