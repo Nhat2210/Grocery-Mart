@@ -106,7 +106,6 @@
     &__confirm{
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
     &__check{
         input{
