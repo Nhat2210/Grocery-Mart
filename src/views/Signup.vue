@@ -20,13 +20,13 @@ const handleSignUp = async () => {
   }
 
   try {
-    const createUser = await createUserWithEmailAndPassword(
+    const useCredential = await createUserWithEmailAndPassword(
       auth,
       email.value,
       password.value
     );
-    const newuser = createUser.user;
-    console.log("Đăng ký thành công:", newuser.email);
+    const user = useCredential.user;
+    console.log("Đăng ký thành công:", user.email);
     alert("Đăng ký thành công! Vui lòng đăng nhập.");
   } catch (error) {
     console.error("Lỗi khi đăng ký:", error.message);
@@ -66,7 +66,7 @@ const handleSignUp = async () => {
             Sign in with Gmail
         </button>
         <div class="signup-right__signIn">
-            You have an account yet ? <a href="#!" class="signup-right__signIn__link">Sign In</a>
+            You have an account yet ? <a href="/Login" class="signup-right__signIn__link">Sign In</a>
         </div>
     </div>
 </div>
