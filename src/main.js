@@ -3,6 +3,8 @@ import "./assets/scss/_index.scss";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
+// firebase
+
 import App from "./App.vue";
 import router from "./router";
 

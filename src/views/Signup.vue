@@ -1,6 +1,40 @@
 <script setup>
+import { auth, createUserWithEmailAndPassword } from "../firebase.js"; 
+import { ref } from "vue";
 
+
+const email = ref("");
+const password = ref("");
+const confirmPassword = ref("");
+
+// Hàm xử lý đăng ký
+const handleSignUp = async () => {
+  if (!email.value || !password.value || !confirmPassword.value) {
+    alert("Vui lòng điền đầy đủ thông tin.");
+    return;
+  }
+
+  if (password.value !== confirmPassword.value) {
+    alert("Mật khẩu và xác nhận mật khẩu không khớp.");
+    return;
+  }
+
+  try {
+    const createUser = await createUserWithEmailAndPassword(
+      auth,
+      email.value,
+      password.value
+    );
+    const newuser = createUser.user;
+    console.log("Đăng ký thành công:", newuser.email);
+    alert("Đăng ký thành công! Vui lòng đăng nhập.");
+  } catch (error) {
+    console.error("Lỗi khi đăng ký:", error.message);
+    alert("Đăng ký thất bại: " + error.message);
+  }
+};
 </script>
+
 <template>
 <div class="signup">
     <div class="signup-left">
@@ -16,9 +50,9 @@
         </a>
         <h2 class="signup-right__heading">Sign Up</h2>
         <p class="signup-right__desc">Let’s create your account and  Shop like a pro and save money.</p>
-        <input type="text" class="signup-right__input email" placeholder="Email"><br>
-        <input type="password" class="signup-right__input password" placeholder="Password"><br>
-        <input type="password" class="signup-right__input confirmpassword" placeholder="Confirm Password"><br>
+        <input type="text" class="signup-right__input email" placeholder="Email"  v-model="email"><br>
+        <input type="password" class="signup-right__input password" placeholder="Password"  v-model="password"><br>
+        <input type="password" class="signup-right__input confirmpassword" placeholder="Confirm Password"    v-model="confirmPassword"><br>
         <div class="signup-right__confirm">
             <div class="signup-right__check">
                 <input type="checkbox">
@@ -26,7 +60,7 @@
             </div>
             <a href="#!" class="signup-right__check__recover">Recovery Password</a>
         </div>
-        <button class="signupButton">Sign Up</button>
+        <button class="signupButton" @click="handleSignUp">Sign Up</button>
         <button class="signinButton">
             <img src="../assets/signup/gg.svg" alt="" class="signinButton__icon">
             Sign in with Gmail
