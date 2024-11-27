@@ -9,9 +9,32 @@ const {push} = useRouter()
 const email = ref("");
 const password = ref("");
 
+//add validate
+const validateEmail = () => {
+  if (!email.value) {
+    alert("Vui lòng nhập email");
+    return false;
+  } else if (!/^[a-zA-Z0-9](\.?[a-zA-Z0-9])+@g(oogle)?mail\.com$/.test(email.value)) {
+    alert("Định dạng email không hợp lệ (chỉ chấp nhận Gmail)");
+    return false;
+  }
+  return true;
+};
+
+const validatePassword = () => {
+  if (!password.value) {
+    alert("Vui lòng nhập mật khẩu");
+    return false;
+  } else if (password.value.length < 8) {
+    alert("Mật khẩu phải có ít nhất 8 ký tự");
+    return false;
+  }
+  return true;
+};
+// end validate
+
 const handleLogin = async () => {
-    if(!email.value || !password.value ){
-        alert("Vui lòng nhập email và mật khẩu");
+    if (!validateEmail() || !validatePassword()) {
         return;
     }
     try{
@@ -32,7 +55,6 @@ const handleLogin = async () => {
     }
 
 }
-signInWithEmailAndPassword(auth, email, password)
 </script>
 <template>
 <div class="signup">
@@ -49,7 +71,7 @@ signInWithEmailAndPassword(auth, email, password)
         </a>
         <h2 class="signup-right__heading">Hello Again</h2>
         <p class="signup-right__desc"> Welcome back to sign in. As a returning customer, you have access to your previously saved all information.</p>
-        <input type="text" class="signup-right__input email" placeholder="Email"  v-model="email"><br>
+        <input type="text" class="signup-right__input email" :rules="rules" placeholder="Email"  v-model="email"><br>
         <input type="password" class="signup-right__input password" placeholder="Password"  v-model="password"><br>
         <div class="signup-right__confirm">
             <div class="signup-right__check">
@@ -104,6 +126,7 @@ signInWithEmailAndPassword(auth, email, password)
     width: 50%;
     text-align: center;
     padding: 20px 120px;
+
     &__logo{
         cursor: pointer;
         display: flex;
@@ -135,6 +158,18 @@ signInWithEmailAndPassword(auth, email, password)
         padding: 10px 20px;
         border-radius: 10px;
         margin-bottom: 20px;
+        position: relative;
+        &::before{
+            content: 'dsaaaaaaaaaaaaa';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            color: red;
+            background: red;
+            display: block;
+        }
     }
     &__confirm{
         display: flex;

@@ -7,9 +7,36 @@ const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 
+
+// Them Validate
+//add validate
+const validateEmail = () => {
+  if (!email.value) {
+    alert("Vui lòng nhập email");
+    return false;
+  } else if (!/^[a-zA-Z0-9](\.?[a-zA-Z0-9])+@g(oogle)?mail\.com$/.test(email.value)) {
+    alert("Định dạng email không hợp lệ (chỉ chấp nhận Gmail)");
+    return false;
+  }
+  return true;
+};
+
+const validatePassword = () => {
+  if (!password.value) {
+    alert("Vui lòng nhập mật khẩu");
+    return false;
+  } else if (password.value.length < 8) {
+    alert("Mật khẩu phải có ít nhất 8 ký tự");
+    return false;
+  }
+  return true;
+};
+// end validate
+// ket thuc validate
+
 // Hàm xử lý đăng ký
 const handleSignUp = async () => {
-  if (!email.value || !password.value || !confirmPassword.value) {
+  if (validateEmail() || validatePassword() || !confirmPassword.value) {
     alert("Vui lòng điền đầy đủ thông tin.");
     return;
   }
