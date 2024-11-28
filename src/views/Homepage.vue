@@ -1,5 +1,6 @@
 <template>
-    <router-view>
+<n-message-provider>
+  <router-view>
         <Header/>
       <slideshow/>
       <browsecategories/>
@@ -11,7 +12,8 @@
       <n-back-top :right="50" />
        <Footer/>
     </router-view>
-    </template>
+</n-message-provider>
+</template>
     
     <script setup>
     import { RouterView } from 'vue-router';

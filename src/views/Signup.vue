@@ -1,21 +1,22 @@
 <script setup>
 import { auth, createUserWithEmailAndPassword } from "../firebase.js"; 
 import { ref } from "vue";
+import { useMessage } from "naive-ui";
 
 
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
-
+const message = useMessage();
 
 // Them Validate
 //add validate
 const validateEmail = () => {
   if (!email.value) {
-    alert("Vui lòng nhập email");
+    message.warning("Vui lòng nhập email");
     return false;
   } else if (!/^[a-zA-Z0-9](\.?[a-zA-Z0-9])+@g(oogle)?mail\.com$/.test(email.value)) {
-    alert("Định dạng email không hợp lệ (chỉ chấp nhận Gmail)");
+    message.warning("Định dạng email không hợp lệ (chỉ chấp nhận Gmail");
     return false;
   }
   return true;
@@ -23,10 +24,10 @@ const validateEmail = () => {
 
 const validatePassword = () => {
   if (!password.value) {
-    alert("Vui lòng nhập mật khẩu");
+    message.warning("Vui lòng nhập mật khẩu");
     return false;
   } else if (password.value.length < 8) {
-    alert("Mật khẩu phải có ít nhất 8 ký tự");
+    message.warning("Mật khẩu phải có ít nhất 8 ký tự");
     return false;
   }
   return true;
@@ -37,12 +38,12 @@ const validatePassword = () => {
 // Hàm xử lý đăng ký
 const handleSignUp = async () => {
   if (validateEmail() || validatePassword() || !confirmPassword.value) {
-    alert("Vui lòng điền đầy đủ thông tin.");
+    message.warning("Vui lòng điền đầy đủ thông tin.");
     return;
   }
 
   if (password.value !== confirmPassword.value) {
-    alert("Mật khẩu và xác nhận mật khẩu không khớp.");
+    message.warning("Mật khẩu và xác nhận mật khẩu không khớp.");
     return;
   }
 
@@ -54,10 +55,10 @@ const handleSignUp = async () => {
     );
     const user = useCredential.user;
     console.log("Đăng ký thành công:", user.email);
-    alert("Đăng ký thành công! Vui lòng đăng nhập.");
+    message.success("Đăng ký thành công! Vui lòng đăng nhập.");
   } catch (error) {
     console.error("Lỗi khi đăng ký:", error.message);
-    alert("Đăng ký thất bại: " + error.message);
+    message.error("Đăng ký thất bại: ");
   }
 };
 </script>

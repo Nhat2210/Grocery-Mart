@@ -3,19 +3,24 @@ import { auth } from '@/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
+import { useMessage } from 'naive-ui';
 
+const message = useMessage();
+    
 const {push} = useRouter()
 
 const email = ref("");
 const password = ref("");
 
+
+
 //add validate
 const validateEmail = () => {
   if (!email.value) {
-    alert("Vui lòng nhập email");
+    message.warning("Vui lòng nhập email!");
     return false;
   } else if (!/^[a-zA-Z0-9](\.?[a-zA-Z0-9])+@g(oogle)?mail\.com$/.test(email.value)) {
-    alert("Định dạng email không hợp lệ (chỉ chấp nhận Gmail)");
+    message.warning("Định dạng email không hợp lệ!");
     return false;
   }
   return true;
@@ -23,10 +28,10 @@ const validateEmail = () => {
 
 const validatePassword = () => {
   if (!password.value) {
-    alert("Vui lòng nhập mật khẩu");
+    message.warning("Vui lòng nhập mật khẩu");
     return false;
   } else if (password.value.length < 8) {
-    alert("Mật khẩu phải có ít nhất 8 ký tự");
+    message.warning("Mật khẩu phải có ít nhất 8 ký tự");
     return false;
   }
   return true;
@@ -45,51 +50,51 @@ const handleLogin = async () => {
         );
         const user = useCredential.user;
         console.log("Đăng nhập thành công", user.email);
-        alert("Chào mừng ", user.email);
+        message.success("Đăng nhập thành công!");
         localStorage.setItem("user",JSON.stringify(user));
         push("/");
     }
     catch(error){
         console.log("có lỗi :" ,error.message);
-        alert("Có lỗi", error.message);
+        message.warning("Lỗi: ", error.message);
     }
 
 }
 </script>
 <template>
-<div class="signup">
-    <div class="signup-left">
-        <div class="signup-left__introduction">
-            <img src="../assets/signup/signup.svg" alt="" class="signup-left__img">
-            <p class="signup-left__desc">The best of luxury brand values, high quality products, and innovative services</p>
-        </div>
-    </div>
-    <div class="signup-right">
-        <a href="/" class="signup-right__logo">
-            <img src="../assets/Icon.svg" alt="" class="signup-right__icon">
-            <p class="signup-right__name">GroceryMart</p>
-        </a>
-        <h2 class="signup-right__heading">Hello Again</h2>
-        <p class="signup-right__desc"> Welcome back to sign in. As a returning customer, you have access to your previously saved all information.</p>
-        <input type="text" class="signup-right__input email" :rules="rules" placeholder="Email"  v-model="email"><br>
-        <input type="password" class="signup-right__input password" placeholder="Password"  v-model="password"><br>
-        <div class="signup-right__confirm">
-            <div class="signup-right__check">
-                <input type="checkbox">
-                <p class="signup-right__check__content">Set as default card</p>
+        <div class="signup">
+        <div class="signup-left">
+            <div class="signup-left__introduction">
+                <img src="../assets/signup/signup.svg" alt="" class="signup-left__img">
+                <p class="signup-left__desc">The best of luxury brand values, high quality products, and innovative services</p>
             </div>
-            <a href="#!" class="signup-right__check__recover">Recovery Password</a>
         </div>
-        <button class="signupButton" @click="handleLogin">Sign Up</button>
-        <button class="signinButton">
-            <img src="../assets/signup/gg.svg" alt="" class="signinButton__icon">
-            Sign in with Gmail
-        </button>
-        <div class="signup-right__signIn">
-            Don't have an account yet ? <a href="/Signup" class="signup-right__signIn__link">Sign Up</a>
+        <div class="signup-right">
+            <a href="/" class="signup-right__logo">
+                <img src="../assets/Icon.svg" alt="" class="signup-right__icon">
+                <p class="signup-right__name">GroceryMart</p>
+            </a>
+            <h2 class="signup-right__heading">Hello Again</h2>
+            <p class="signup-right__desc"> Welcome back to sign in. As a returning customer, you have access to your previously saved all information.</p>
+            <input type="text" class="signup-right__input email" placeholder="Email"  v-model="email"><br>
+            <input type="password" class="signup-right__input password" placeholder="Password"  v-model="password"><br>
+            <div class="signup-right__confirm">
+                <div class="signup-right__check">
+                    <input type="checkbox">
+                    <p class="signup-right__check__content">Set as default card</p>
+                </div>
+                <a href="#!" class="signup-right__check__recover">Recovery Password</a>
+            </div>
+            <button class="signupButton" @click="handleLogin">Sign Up</button>
+            <button class="signinButton">
+                <img src="../assets/signup/gg.svg" alt="" class="signinButton__icon">
+                Sign in with Gmail
+            </button>
+            <div class="signup-right__signIn">
+                Don't have an account yet ? <a href="/Signup" class="signup-right__signIn__link">Sign Up</a>
+            </div>
         </div>
     </div>
-</div>
 </template>
 
 
