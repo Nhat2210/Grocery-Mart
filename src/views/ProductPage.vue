@@ -89,7 +89,7 @@ const options = [
                                 <h3 class="banner__detail__right__addCard__sale__price">$540.00</h3>
                             </div>
                             <div class="banner__detail__right__addCard__button">
-                                <button class="banner__detail__right__addCard__sale__btn">Add to cart</button>
+                                <button class="banner__detail__right__addCard__button__btn">Add to cart</button>
                                 <img src="../assets/icons/heart.svg" class="banner__detail__right__addCard__button__icon">
                             </div>
                         </div>
@@ -107,7 +107,7 @@ const options = [
 }
 .product{
     &__menu{
-        background-color: red;
+        background-color: #abb8ca;
         padding: 20px;
         border-radius: 10px;
         margin: 30px 0;
@@ -129,12 +129,13 @@ const options = [
 }
 .banner{
     display: flex;
-    height: 500px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     &__image{
         width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid #e5e2e2;
     }
     &__content{
         width: 55%;
@@ -234,6 +235,49 @@ const options = [
                 &__desc{
                     font-size: 1.4rem;
                     font-weight: 400;
+                }
+            }
+            &__addCard{
+                border: 1px solid gray;
+                border-radius: 5px;
+                padding: 20px;
+                &__origin{
+                    display: flex;
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                    margin-bottom: 20px;
+                    &__price{
+                        margin-right: 10px;
+                    }
+                    &__discount{
+                        color: #67B044;
+                        background-color: #d8eece;
+                    }
+                }
+                &__sale{
+                    font-weight: 500;
+                    font-size: 2.6rem;
+                }
+                &__button{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 20px;
+                    &__btn{
+                        display: block;
+                        border: none;
+                        background-color: #FFB700;
+                        padding: 10px 55px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                    &__icon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid gray;
+                        padding: 5px;
+                    }
                 }
             }
         }
