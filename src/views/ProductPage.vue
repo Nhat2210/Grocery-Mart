@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import { NSelect } from 'naive-ui';
 import Header from '@/components/Header.vue';
 import { RouterLink, RouterView } from 'vue-router';
-Header
 const options = [
     {
         label: '500g',

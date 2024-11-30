@@ -68,11 +68,22 @@ const totalPrice = () => {
 
 <style lang="scss" scoped>
 .checkout{
+    margin-left: auto;
     background-color: #fff;
     width: 550px;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 20px;
+    margin-top: 20px;
+    position: fixed;
+    right: 75px;
+    z-index: 999;
+    &::after{
+        content: url(../assets/icons/triangle.svg);
+        position: absolute;
+        top:-13px;
+        right: 120px;
+    }
     &__wrapper{
     }
     &__heading{

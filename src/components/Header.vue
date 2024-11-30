@@ -1,8 +1,16 @@
 <script setup>
+import { ref } from 'vue';
 import logo from '@/components/logo.vue';
 import DropdownDepartments from '@/components/dropdownDepartments.vue';
 import DropdownGrocery from '@/components/dropdownGrocery.vue';
 import DropdownBeauty from '@/components/dropdownBeauty.vue';
+import ModalCheckout from './ModalCheckout.vue';
+const isShowModal = ref(false);
+const toggleModal = () => {
+    isShowModal.value = !isShowModal.value;
+    console.log(isShowModal.value);
+}
+
 </script>
 <template>
     <header id="header">
@@ -43,7 +51,7 @@ import DropdownBeauty from '@/components/dropdownBeauty.vue';
                             <span class="top-act_title">03</span>
                         </button>
                         <div class="top-act__separate"></div>
-                        <button class="top-act__btn">
+                        <button class="top-act__btn" @click="toggleModal">
                             <img src="../assets/icons/cart.svg" alt="" class="top-act__icon icon">
                             <span class="top-act_title">$65.42</span>
                         </button>
@@ -53,8 +61,10 @@ import DropdownBeauty from '@/components/dropdownBeauty.vue';
                     </div>
                 </div>
             </div>
+            <ModalCheckout v-if="isShowModal" class="modalCheckout"/>
         </div>
     </header>
+
 </template>
 
 
@@ -63,6 +73,10 @@ import DropdownBeauty from '@/components/dropdownBeauty.vue';
 #header{
     background:#EEEEEE;
     padding: 12px;
+    position: relative;
+}
+.modalCheckout{
+    position: absolute;
 }
 .top-bar{
     display: flex;
@@ -88,9 +102,6 @@ import DropdownBeauty from '@/components/dropdownBeauty.vue';
         height: 50px;
         padding: 15px;
     }
-    //    &__link:nth-child(2n){
-    //     padding: 15px;
-    //    }
        &__arrow{
         margin-left: 5px;
        }
