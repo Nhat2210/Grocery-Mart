@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 import { NSelect } from 'naive-ui';
+import Header from '@/components/Header.vue';
+import { RouterLink, RouterView } from 'vue-router';
+Header
 const options = [
     {
         label: '500g',
@@ -17,6 +20,7 @@ const options = [
 ];
 </script>
 <template>
+    <Header/>
     <div class="container">
         <div class="product">
                 <div class="product__menu">
@@ -24,7 +28,7 @@ const options = [
                         <div class="product__menu__item"><a href="#!" class="product__menu__item__link">Departments <img src="../assets/icons/arrow-right.svg" alt="" class="product__menu__item__icon"></a></div>
                         <div class="product__menu__item"><a href="#!" class="product__menu__item__link">Coffee <img src="../assets/icons/arrow-right.svg" alt="" class="product__menu__item__icon"></a></div>
                         <div class="product__menu__item"><a href="#!" class="product__menu__item__link">Coffee Beans <img src="../assets/icons/arrow-right.svg" alt="" class="product__menu__item__icon"></a></div>
-                        <div class="product__menu__item"><a href="#!" class="product__menu__item__link">LavAzza<img src="../assets/icons/arrow-right.svg" alt="" class="product__menu__item__icon"> </a></div>
+                        <div class="product__menu__item"><a href="#!" class="product__menu__item__link active">LavAzza<img src="../assets/icons/arrow-right.svg" alt="" class="product__menu__item__icon"> </a></div>
                     </div>
                 </div>
         </div>
@@ -97,14 +101,80 @@ const options = [
                 </div>
             </div>
         </div>
+        <div class="Review">
+            <div class="Review__list">
+                <div class="Review__item">Description</div>
+                <div class="Review__item">Features</div>
+                <div class="Review__item">Review (<span class="Review__item__count">1100</span>)</div>
+                <div class="Review__item">Similar</div>
+            </div>
+            <h3 class="Review__heading">What our customers are saying</h3>
+            <div class="Review__card__list">
+                <div class="Review__card__item">
+                    <div class="Review__card__item__user">
+                        <img src="../assets/productPage/user01.svg" class="Review__card__item__user__avatar"></img>
+                        <div class="Review__card__item__user__introduce">
+                            <div class="Review__card__item__user__introduce__name">Cao Dinh Nhat</div>
+                            <div class="Review__card__item__user__introduce__review">Great product, I love this Coffee Beans </div>
+                        </div>
+                    </div>
+                    <div class="Review__card__item__judge">
+                        <div class="Review__card__item__judge__star">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                        </div>
+                        <div class="Review__card__item__judge__count">(5)Review</div>
+                    </div>
+                </div>
+                <div class="Review__card__item">
+                    <div class="Review__card__item__user">
+                        <img src="../assets/productPage/user01.svg" class="Review__card__item__user__avatar"></img>
+                        <div class="Review__card__item__user__introduce">
+                            <div class="Review__card__item__user__introduce__name">Cao Dinh Nhat</div>
+                            <div class="Review__card__item__user__introduce__review">Great product, I love this Coffee Beans </div>
+                        </div>
+                    </div>
+                    <div class="Review__card__item__judge">
+                        <div class="Review__card__item__judge__star">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                        </div>
+                        <div class="Review__card__item__judge__count">(5)Review</div>
+                    </div>
+                </div>
+                <div class="Review__card__item">
+                    <div class="Review__card__item__user">
+                        <img src="../assets/productPage/user01.svg" class="Review__card__item__user__avatar"></img>
+                        <div class="Review__card__item__user__introduce">
+                            <div class="Review__card__item__user__introduce__name">Cao Dinh Nhat</div>
+                            <div class="Review__card__item__user__introduce__review">Great product, I love this Coffee Beans </div>
+                        </div>
+                    </div>
+                    <div class="Review__card__item__judge">
+                        <div class="Review__card__item__judge__star">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                            <img src="../assets/icons/star.svg" alt="" class="Review__card__item__judge__image">
+                        </div>
+                        <div class="Review__card__item__judge__count">(5)Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 
 
 <style lang="scss" scoped>
-.container{
-}
 .product{
     &__menu{
         background-color: #abb8ca;
@@ -118,10 +188,20 @@ const options = [
             margin-right: 10px;
             &__link{
             display: flex;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #9E9DA8;
             gap: 10px;
+            &:hover{
+                color:#1A162E;
+            }
+
             }
             &__icon{
                 width: 5%;
+            }
+            .active{
+                color:#1A162E;
             }
         }
 
@@ -279,6 +359,71 @@ const options = [
                         padding: 5px;
                     }
                 }
+            }
+        }
+    }
+}
+.Review{
+    &__list{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+    &__item{
+        font-size: 2.2;
+        font-weight: 500;
+        color:#9E9DA8;
+        &:hover{
+            color: #1A162E;
+        }
+    }
+    &__heading{
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    &__card__list{
+        display: flex;
+        justify-content: space-between;
+        gap:30px;
+    }
+    &__card__item{
+        background-color: #e5e2e2;
+        border-radius: 16px;
+        padding: 30px;
+        &__user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            &__avatar{
+                width: 20%;
+            }
+            &__introduce{
+
+                &__name{
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                &__review{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        &__judge{
+            display: flex;
+            gap: 20px;
+            &__star{
+                display: flex;
+                gap: 2px;
+            }
+            &__count{
+                font-size: 1.6rem;
+                font-weight: 500;
             }
         }
     }
