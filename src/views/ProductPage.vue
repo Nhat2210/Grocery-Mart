@@ -105,7 +105,7 @@ const options = [
             <div class="Review__list">
                 <div class="Review__item">Description</div>
                 <div class="Review__item">Features</div>
-                <div class="Review__item">Review (<span class="Review__item__count">1100</span>)</div>
+                <div class="Review__item active">Review (<span class="Review__item__count">1100</span>)</div>
                 <div class="Review__item">Similar</div>
             </div>
             <h3 class="Review__heading">What our customers are saying</h3>
@@ -370,13 +370,20 @@ const options = [
         justify-content: space-between;
         margin: 30px 0;
         cursor: pointer;
+        .active{
+            color:#1A162E !important;
+        }
     }
+
     &__item{
         font-size: 2.2;
         font-weight: 500;
         color:#9E9DA8;
         &:hover{
             color: #1A162E;
+        }
+        &.active{
+            color:#1A162E;
         }
     }
     &__heading{

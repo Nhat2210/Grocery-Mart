@@ -4,12 +4,17 @@ import Signup from "@/views/Signup.vue";
 import Login from "@/views/Login.vue";
 import Homepage from "@/views/Homepage.vue";
 import ProductPage from "@/views/ProductPage.vue";
+import ModalCheckOut from "@/components/ModalCheckout.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "",
       component: Homepage,
+    },
+    {
+      path: "/test",
+      component: ModalCheckOut,
     },
     {
       path: "/Login",
