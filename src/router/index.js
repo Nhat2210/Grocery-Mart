@@ -8,12 +8,17 @@ import ModalCheckOut from "@/components/ModalCheckout.vue";
 import CheckOut from "@/views/CheckOut.vue";
 import test from "@/views/test.vue";
 import CheckOutShipping from "@/views/checkOutShipping.vue";
+import CheckoutPayment from "@/views/checkoutPayment.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "",
       component: Homepage,
+    },
+    {
+      path: "/checkoutPayment",
+      component: CheckoutPayment,
     },
     {
       path: "/CheckOutShipping",
