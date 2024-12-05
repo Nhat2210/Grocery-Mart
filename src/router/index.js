@@ -11,6 +11,7 @@ import CheckOutShipping from "@/views/checkOutShipping.vue";
 import CheckoutPayment from "@/views/checkoutPayment.vue";
 import favouriteList from "@/views/favouriteList.vue";
 import Profile from "@/views/profile.vue";
+import creditCard from "@/views/profileCard.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -18,9 +19,16 @@ const router = createRouter({
       path: "",
       component: Homepage,
     },
+
     {
-      path: "/user",
+      path: "/profile",
       component: Profile,
+      children: [
+        {
+          path: "creditCard",
+          component: creditCard,
+        },
+      ],
     },
     {
       path: "/favouriteList",

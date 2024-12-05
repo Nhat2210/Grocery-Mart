@@ -1,5 +1,7 @@
 <template>
+    <router-view :key="$route.path"/>
 <Header/>
+
 <div class="container">
     <div class="profile">
         <div class="account">
@@ -69,6 +71,7 @@
             </li>
         </ul>
     </div>
+    
     <div class="myWallet">
         <div class="Wallet">
             <div class="heading">My Wallet</div>
@@ -77,7 +80,9 @@
                 <img src="../assets/user/card1.svg" alt="" class="card">
                 <img src="../assets/user/card2.svg" alt="" class="card">
                 <div class="newcard">
-                        <n-button>Upload File</n-button>
+                        <router-link to="/profile/CreditCard">
+                            <n-button >Upload File</n-button>
+                        </router-link>
                 </div>
             </div>
         </div>
@@ -137,11 +142,20 @@
         </div>
     </div>
 </div>
+
 </template>
 
 <script setup>
 import Header from '@/components/Header.vue';
 import { NButton, NUpload } from 'naive-ui';
+import { RouterView } from 'vue-router';
+import { useRouter } from 'vue-router';
+
+const {push }= useRouter();
+const goToCreditCard = () => {
+    push('/profile/creditCard');
+}
+
 </script>
 
 <style lang="scss" scoped>

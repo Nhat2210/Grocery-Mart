@@ -1,7 +1,7 @@
 <template>
   <n-config-provider>
     <n-message-provider>
-      <router-view></router-view>
+      <router-view/>
     </n-message-provider>
   </n-config-provider>
 </template>
