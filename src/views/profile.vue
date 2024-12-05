@@ -77,18 +77,7 @@
                 <img src="../assets/user/card1.svg" alt="" class="card">
                 <img src="../assets/user/card2.svg" alt="" class="card">
                 <div class="newcard">
-                    <n-upload
-                        class="card"
-                        action="https://www.mocky.io/v2/5e4bafc63100007100d8b70f"
-                        :headers="{
-                        'naive-info': 'hello!',
-                        }"
-                        :data="{
-                        'naive-data': 'cool! naive!',
-                        }"
-                    >
                         <n-button>Upload File</n-button>
-                    </n-upload>
                 </div>
             </div>
         </div>
@@ -133,6 +122,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="productSeparate"></div>
                 <div class="productItem">
                     <img src="../assets/products/product-2.svg" alt="" class="img">
                     <div class="content">
@@ -184,20 +174,17 @@ import { NButton, NUpload } from 'naive-ui';
         display: flex;
         gap: 10px;
         img{
-            width: 250px;
-            height: 160px;
+            width: 220px;
+            height: 120px;
         }
         .newcard{
-            width: 248px;
-            height: 158px; 
+            width: 218px;
+            height: 118px; 
             border: 1px dashed #1A162E;
             border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            .n-upload{
-                width: auto;
-            }
         }
     }
     .Account{
@@ -241,6 +228,12 @@ import { NButton, NUpload } from 'naive-ui';
             display: flex;
             flex-direction: column;
             gap: 15px;
+            .productSeparate{
+                width: 100%;
+                height: 1px;
+                background-color: #1A162E;
+                opacity: 0.4;
+            }
             .productItem{
                 display: flex;
                 align-items: center;
